@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <style>
+        /* Base styles and colors */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            max-height: 100vh;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Search bar styling */
+        .search-bar input[type="text"] {
+            padding: 8px;
+            width: 300px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Heading and page layout */
+        .heading {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Photo gallery styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: 290px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Iframe styling */
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            gap: 20px;
+        }
+        iframe {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Economic Times</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#iframe">Embed</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+
+    <!-- Heading -->
+    <h1 class="heading">Welcome to My News Bulletin</h1>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <img src="https://images.unsplash.com/photo-1498354178607-a79df2916198?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image 1">
+        <img src="https://images.unsplash.com/photo-1570563568161-e4f5e8c6e27f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fG5ld3N8ZW58MHx8MHx8fDA%3D" alt="Placeholder Image 2">
+        <img src="https://images.unsplash.com/photo-1557804506-e969d7b32a4b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG5ld3N8ZW58MHx8MHx8fDA%3D" alt="Placeholder Image 3">
+        <img src="https://images.unsplash.com/photo-1497015289639-54688650d173?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Placeholder Image 4">
+    </section>
+
+    <!-- Iframe Embed Section -->
+    <div id="iframe" class="iframe-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j6OOlN1gsOY?si=T0RiFrgjbsmqbLy3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/H4Hg9SwS4sQ?si=O3FTJedUf81HQNHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_sGlX-6RJ9Q?si=ZT6VN9YmPQtaxXUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rqP7JsKotuA?si=zoqSMC4-I9PyBWvR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2024 My News Bulletin | All Rights Reserved
+    </div>
+
+</body>
+</html>
