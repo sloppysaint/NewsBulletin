@@ -22,6 +22,7 @@
             padding: 15px 30px;
             background-color: #4CAF50;
             color: #fff;
+            flex-wrap: wrap;
         }
         .navbar a {
             color: white;
@@ -31,11 +32,10 @@
         .navbar a:hover {
             text-decoration: underline;
         }
-
-        /* Search bar styling */
         .search-bar input[type="text"] {
             padding: 8px;
-            width: 300px;
+            width: 200px;
+            max-width: 100%;
             border: none;
             border-radius: 4px;
         }
@@ -47,7 +47,7 @@
             color: #333;
         }
 
-        /* Photo gallery styling */
+        /* Gallery styling */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -58,7 +58,8 @@
         .gallery img {
             width: 100%;
             max-width: 300px;
-            height: 290px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
@@ -70,16 +71,17 @@
         /* Iframe styling */
         .iframe-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            padding: 50px;
             gap: 20px;
+            padding: 20px;
         }
-        iframe {
-            width: 300px;
+        .iframe-container iframe {
+            width: 100%;
+            max-width: 300px;
             height: 200px;
             border: 2px solid #ccc;
             border-radius: 8px;
-            
         }
 
         /* Footer styling */
@@ -88,9 +90,42 @@
             padding: 15px;
             background-color: #333;
             color: #fff;
-            position: fixed;
-            bottom: 0;
             width: 100%;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar a {
+                margin: 5px 0;
+            }
+            .search-bar input[type="text"] {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .gallery img {
+                max-width: 100%;
+                height: auto;
+            }
+            .iframe-container iframe {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .heading {
+                font-size: 1.5em;
+                margin: 10px;
+            }
+            .navbar {
+                padding: 10px;
+            }
+            .iframe-container iframe {
+                height: 180px;
+            }
         }
     </style>
 </head>
@@ -123,10 +158,10 @@
 
     <!-- Iframe Embed Section -->
     <div id="iframe" class="iframe-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/j6OOlN1gsOY?si=T0RiFrgjbsmqbLy3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/H4Hg9SwS4sQ?si=O3FTJedUf81HQNHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/_sGlX-6RJ9Q?si=ZT6VN9YmPQtaxXUW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rqP7JsKotuA?si=zoqSMC4-I9PyBWvR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/j6OOlN1gsOY?si=T0RiFrgjbsmqbLy3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/H4Hg9SwS4sQ?si=O3FTJedUf81HQNHF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/_sGlX-6RJ9Q?si=ZT6VN9YmPQtaxXUW" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/rqP7JsKotuA?si=zoqSMC4-I9PyBWvR" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
     <!-- Footer -->
